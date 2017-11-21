@@ -1,0 +1,6 @@
+entrypoint: bundle exec rails server Puma -p $PORT
+env: flex
+runtime: ruby
+
+env_variables:
+  secret_key_base: 453fe41d2755d5c304584ce5af7e93aa69c32a376a8f86faa18673859cb65d10fc12b22dfcedcf4f4156a176e14aabf37c5851e4da6af3f7f8c06fcb899b1774

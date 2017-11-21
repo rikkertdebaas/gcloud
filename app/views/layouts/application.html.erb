@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title><%= @title %></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+  </head>
+
+<body>
+    <navbar>
+      <%= render 'shared/navbar' %>
+    </navbar>
+
+    <div class="container-fluid" role="main">
+    <%= yield %>
+    </div>
+
+     <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+
+     <footer class="footer" id="footer" >
+
+         <%= render 'shared/footer' %>
+
+     </footer>
+
+
+
+
+
+    </body>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</html>

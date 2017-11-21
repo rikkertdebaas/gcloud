@@ -1,0 +1,10 @@
+<%= bootstrap_form_for @message, url: create_message_url do |f| %>
+  <%= notice %>
+  <%= @message.errors.full_messages.join(', ') %>
+  <%= f.text_field :voornaam, placeholder: 'Voornaam' %>
+  <%= f.text_field :achternaam, placeholder: 'Achternaam' %>
+  <%= f.email_field :email, placeholder: 'E-mail' %>
+  <%= f.number_field :telefoon, placeholder: 'Telefoonnummer' %>
+  <%= f.text_area :bericht, label_class: "bericht", placeholder: 'Bericht' %>
+  <%= f.submit 'Verstuur' %>
+<% end %>

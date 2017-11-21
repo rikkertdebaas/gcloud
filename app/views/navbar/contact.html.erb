@@ -1,0 +1,46 @@
+<% @title="Contact" %>
+<div class="row">
+  <!--<div class="col-lg-6">
+      <h2 class="page-header text-center">Locatie</h2>
+  </div>-->
+  <div class="col-lg-1">
+  </div>
+  <div class="col-lg-5">
+      <h2 class="page-header text-center">Contactgegevens</h2>
+      <h3 class="text-center"></h3>
+      <p class="margin-left;150px">
+        <h4> Adres </h4> <p> Kraanstraat 3 </p>
+          <br>
+          <h4> Plaats en postcode </h4>
+          <p> 3514 BD, Utrecht </p>
+          <br>
+          <h4> Mobiele nummer </h4>
+           <p> (+31)6 811 749 30 </p>
+          <h4> E-mail adres </h4>
+          <p> Richard@cesarWise.nl </p>
+
+  </div>
+  <div class="col-lg-5" >
+    <h2 class="page-header text-center">Contactformulier</h2>
+    <p> Heeft u vragen of opmerkingen? U kunt deze stellen door een mail te
+      sturen naar: Richard.felius@cesarWise.nl of contact op te nemen via het
+      contactformulier. </p>
+    <div class="form-group">
+    <%= bootstrap_form_for @message, url: create_message_url do |f| %>
+      <%= notice %>
+      <%= @message.errors.full_messages.join(', ') %>
+
+      <%= f.text_field :voornaam, placeholder: 'Vul hier uw voornaam in' %>
+      <%= f.text_field :achternaam, placeholder: 'Vul hier uw Achternaam in' %>
+      <%= f.email_field :email, placeholder: 'Vul hier uw E-mail adres in' %>
+      <%= f.phone_field :telefoon, placeholder: 'Vul hier uw Telefoonnummer in'
+      %>
+      <%= f.text_area :bericht, control_col: "col-sm-8", placeholder: 'Schrijf hier uw bericht' %>
+      <%= f.submit 'Verstuur', :style=> 'color:#0c1927'%>
+    <% end %>
+  </div>
+  </div>
+  <div class="col-lg-5">
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br>
+</div>
